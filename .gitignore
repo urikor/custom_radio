@@ -1,0 +1,7 @@
+*.log
+.htaccess
+.idea
+.idea/*.*
+log
+
+

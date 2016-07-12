@@ -1,0 +1,7 @@
+{
+  "xml":"../channel.xml",
+  "host":"localhost",
+  "base":"d1",
+  "user":"root",
+  "pass":"root"
+}

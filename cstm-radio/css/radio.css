@@ -1,0 +1,10 @@
+#customRadio .label {
+    display: block;
+    float: left;
+    width: 150px;
+}
+#radio-error {
+    color: red;
+    font-size: 12px;
+    margin: 5px;
+}
