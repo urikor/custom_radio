@@ -10,11 +10,11 @@
 </head>
 <body>
     <div id="page">
-        <header>
+        <header class="block">
             <h1><?php echo $page_title; ?></h1>
         </header>
-        <div id="main">
-            <nav id="main-menu">
+        <div id="main" class="block">
+            <nav id="main-menu" class="block">
                 <?php include 'main-menu.php'; ?>
             </nav>
-            <div id="content-wrapper" class="clearfix">
+            <div id="content-wrapper" class="block clearfix">

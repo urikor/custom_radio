@@ -1,5 +1,5 @@
 {
-  "xml":"../channel.xml",
+  "xml":"http://php.local/channel.xml",
   "host":"localhost",
   "base":"d1",
   "user":"root",

@@ -1,43 +1,18 @@
-<?php
+<div id="customRadio">
+    <div class="title param">
+        <span class="label">Track:</span><span id="title">Track name</span>
+    </div>
+    <div class="album param">
+        <span class="label">Album: </span><span id="album">Album</span>
+    </div>
+    <div class="genre param">
+        <span class="label">Genre: </span><span id="genre">Genre</span></div>
+    <div class="duration param"><span class="label">Duration: </span><span id="duration"></span> s
+    </div>
+    <div class="next-song param">
+        <span class="label">Next:</span><span id="next"></span> s
+    </div>
+</div>
 
-if (!class_exists('cstmRadio')) :
-
-    class CSTMRadio
-    {
-        private static $instance;
-
-        public static function instance()
-        {
-
-            if (!isset(self::$instance) && !(self::$instance instanceof cstmRadio)) {
-                self::$instance = new cstmRadio;
-                self::$instance->setup_constants();
-                self::$instance->includes();
-            }
-
-            return self::$instance;
-        }
-
-        private function includes()
-        {
-            require_once 'include/radioDB.php';
-            require_once 'include/radioXML.php';
-            require_once 'include/CustomRadio.php';
-            require_once 'include/load.php';
-        }
-
-        private function setup_constants()
-        {
-            if (!defined('CSTMR_DIR')) {
-                define('CSTMR_DIR', dirname(__FILE__));
-            }
-        }
-    }
-
-endif;
-
-function cstmR() {
-    return CSTMRadio::instance();
-}
-
-cstmR();
+<link rel="stylesheet" type="text/css" href="cstm-radio/css/radio.css">
+<script src="cstm-radio/js/radio.js"></script>

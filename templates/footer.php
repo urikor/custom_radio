@@ -1,6 +1,6 @@
             </div><!-- #content-wrapper -->
-            <footer>
-                <div class="center">
+            <footer class="block">
+                <div>
                     <?php echo "&copy;" . date('Y', time()); ?> | Company Solutions Inc.
                 </div>
             </footer>

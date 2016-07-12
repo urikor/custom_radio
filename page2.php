@@ -1,4 +1,4 @@
-<?php $page_title = 'Custom Radio Page 1'; ?>
+<?php $page_title = 'Custom Radio Page 2'; ?>
 <?php require_once 'templates/header.php'; ?>
 <section id="content" class="block">
     <script>

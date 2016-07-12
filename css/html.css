@@ -6,11 +6,11 @@ body {
 }
 #content {
     float: left;
-    width: 70%;
+    width: 60%;
 }
 #sidebar {
     float: right;
-    width: 30%;
+    width: 40%;
 }
 footer {
     width: 100%;
@@ -21,6 +21,9 @@ footer {
     display: block;
     height: 0;
     visibility: hidden;
+}
+.block {
+    margin: 10px 0;
 }
 .center {
     text-align: center;
@@ -35,7 +38,6 @@ footer {
     display: inline-block;
     margin: 0 10px;
 }
-
 .menu li {
     list-style: none;
 }
