@@ -1,3 +1,12 @@
+#customRadio, #stat-form {
+    border: 1px solid gray;
+    padding: 5px;
+    width: 500px;
+}
+#stat-res {
+    padding: 5px;
+    text-align: center;
+}
 #customRadio .label {
     display: block;
     float: left;
@@ -7,4 +16,7 @@
     color: red;
     font-size: 12px;
     margin: 5px;
+}
+.hidden {
+    visibility: hidden;
 }
