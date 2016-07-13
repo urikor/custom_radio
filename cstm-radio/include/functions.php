@@ -1,10 +1,28 @@
 <?php
+/**
+ * Misc functions.
+ */
+
+/**
+ * Gets configuration from config file.
+ *
+ * @return mixed
+ */
 function get_config()
 {
     $conf = file_get_contents('../config.json');
     return json_decode($conf);
 }
 
+/**
+ * Creates database table for storing radio tracks.
+ *
+ * @param mysqli object $db
+ *   db object
+ * @param string $table
+ *   table name
+ * @return bool|mysqli_result
+ */
 function create_table($db, $table)
 {
     $query = "CREATE TABLE {$table} (
@@ -23,6 +41,17 @@ function create_table($db, $table)
     return $out;
 }
 
+/**
+ * Inserts track record in table.
+ *
+ * @param mysqli object $db
+ *   db object
+ * @param string $table
+ *   table name
+ * @param object $file
+ *   object of track xml file
+ * @return bool|mysqli_result
+ */
 function insert_track($db, $table, $file)
 {
     $time = time();
@@ -34,14 +63,27 @@ function insert_track($db, $table, $file)
     return $out;
 }
 
-function choose_stat($db, $table, $most_kind, $period)
+/**
+ * Gets track statistic from db.
+ *
+ * @param mysqli object $db
+ *   db object
+ * @param string $table
+ *   table name
+ * @param string $most_kind
+ *   kind of statistic (title,genre,artist,longest,shortest)
+ * @param $period
+ *
+ * @return bool|mysqli_result
+ */
+function get_statistic($db, $table, $most_kind, $period)
 {
+    // Prepare period values.
     $hour = 60 * 60;
     $day = $hour * 24;
     $week = $day * 7;
     $month = $day * 30;
     $year = $day * 365;
-
     $period = $$period;
     $current_time = time();
     $range = $current_time - $period;

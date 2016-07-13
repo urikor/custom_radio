@@ -40,11 +40,13 @@
                 }
 
                 if (res.length != 0) {
-                    if (res.kind === 'longest' || res.kind === 'shortest') {
-                        statRes.innerHTML = res.most_kind + ' is <b>' +
+                    if (res.kind === '_none') {
+                        statRes.innerHTML = 'No tracks for choosen period of time.';
+                    } else if (res.kind === 'longest' || res.kind === 'shortest') {
+                        statRes.innerHTML = res.first_message_part + ' is <b>' +
                             res.artist + ' - ' + res.title + '</b> (' + res.duration + ' sec)';
                     } else {
-                        statRes.innerHTML = res.most_kind + ' is <b>' +
+                        statRes.innerHTML = res.first_message_part + ' is <b>' +
                             res.name + '</b> (' + res.number + ' ' + countValue + ')';
                     }
                 } else {

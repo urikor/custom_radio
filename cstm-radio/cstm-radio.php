@@ -1,3 +1,8 @@
+<?php
+/**
+ * Main html markup template.
+ */
+?>
 <div class="ticker param block">
     <span id="ticker"><?php echo date('d/m/Y H:i:s'); ?></span>
 </div>
