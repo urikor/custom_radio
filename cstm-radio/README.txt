@@ -1,5 +1,4 @@
 - Radio script placed in "cstm-radio" directory.
-Other files of project are intended just for demonstration purposes.
 
 - It needs included jQuery on page.
 
